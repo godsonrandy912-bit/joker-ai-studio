@@ -18,7 +18,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -29,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Add Android platform
+      - name: Add Android
         run: npx cap add android
 
       - name: Sync Capacitor
